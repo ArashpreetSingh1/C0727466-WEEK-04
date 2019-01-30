@@ -12,4 +12,13 @@ namespace C0727466_WEEK_04
         {
         }
     }
+
+    class Village
+    {
+        //Node is an ADT
+        //What KIND of DATA do we need in a nood?
+        public Village nextVillage;
+        public string VillageName;
+        public bool isAstrildeHere = false;
+    }
 }
