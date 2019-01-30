@@ -10,6 +10,8 @@ namespace C0727466_WEEK_04
     {
         static void Main(string[] args)
         {
+            Countryside blue = new Countryside();
+            blue.launch();
         }
     }
 
@@ -29,9 +31,14 @@ namespace C0727466_WEEK_04
         Village Ajax = new  Village();
         Village First;
         Village Last;
+        Village Temp;
+        
 
         public void  launch()
         {
+            Village Temp;
+             First = Maple;
+             Last = Ajax;
             Maple.VillageName = "Maple";
             Maple.nextVillage = Toronto;
             Maple.previousVillage = null;
@@ -42,9 +49,22 @@ namespace C0727466_WEEK_04
             Ajax.nextVillage = null;
             Ajax.nextVillage = Toronto;
 
+            Console.WriteLine(this.displayMap());
+            Console.ReadLine();
 
         }
 
-
+        public string displayMap()
+        {
+            string listOfCities = "";
+            //we need to print ALL the cities in our Area
+        
+            
+                listOfCities = listOfCities + First.VillageName + " ----";
+                Temp = First.nextVillage;
+                listOfCities = listOfCities + Temp.VillageName+ "-----";
+            
+            return listOfCities;
+        }
     }
 }
